@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "KIT prettify",
+    "version": "1.1.0",
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "kit-nicer@tobisma.de"
+      }
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://mtv.math.kit.edu/"],
+            "js": ["mtv.js"],
+            "run_at": "document_end"
+        },
+        {
+            "matches": ["https://ilias.studium.kit.edu/*"],
+            "css": ["prettyIlias.css"],
+            "run_at": "document_start"
+        },
+        {
+            "matches": ["https://ilias.studium.kit.edu/*"],
+            "js": ["prettyIlias.js"],
+            "run_at": "document_end"
+        }
+    ]
+}

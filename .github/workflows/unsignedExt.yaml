@@ -1,0 +1,38 @@
+name: Releasing xpi extension file
+
+on:
+    push:
+        tags: 
+            - v*.*.*
+
+jobs:
+    releasingXPi:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+            - run: "sudo apt-get install npm"
+            - run: "npm install -g web-ext"
+            - run: "web-ext build --source-dir ext --filename nicer-kit.xpi --artifacts-dir ."
+            - name: Create Release
+              uses: actions/create-release@v1
+              id: create_release
+              with:
+                draft: false
+                prerelease: false
+                release_name: Prettier moodle (${{ github.ref_name }})
+                tag_name: ${{ github.ref }}
+
+              env:
+                GITHUB_TOKEN: ${{ github.token }}
+
+            - name: Add extension xpi
+              uses: actions/upload-release-asset@v1
+              env:
+                GITHUB_TOKEN: ${{ github.token }}
+
+              with:
+                upload_url: ${{ steps.create_release.outputs.upload_url }}
+                asset_path: nicer-kit.xpi
+                asset_name: nicer-kit.xpi
+                asset_content_type: application/x-xpinstall

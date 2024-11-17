@@ -1,0 +1,7 @@
+
+/* switching upload/cancel buttons in Abgabekasten */
+html body div.il-layout-page main.il-layout-page-content div#mainspacekeeper.container-fluid div.row div#fixed_content.ilContentFixed div#mainscrolldiv div.ilTabsContentOuter div#ilContentContainer.container-fluid div.row div#il_center_col.col-sm-12 form#form_.form-horizontal.preventDoubleSubmission div.form-horizontal div.ilFormFooter.clearfix div.col-sm-6.ilFormCmds {
+    flex-flow: row-reverse;
+    display: flex;
+    gap: .5em;
+}
