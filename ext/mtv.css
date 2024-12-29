@@ -1,0 +1,16 @@
+html.fontawesome-i2svg-active.fontawesome-i2svg-complete body#page-top div#wrapper div#content-wrapper div.container div:nth-child(3) {
+    margin-left: 2rem !important;
+}
+
+hr {
+    border-color: #aaa;
+    margin: .2em 0;
+}
+
+/*body .container {*/
+/*    max-width: 90% !important; */
+/*}*/
+/**/
+/*.table {*/
+/*    width: unset;*/
+/*}*/
