@@ -88,6 +88,7 @@ for (let i = 0; i < statTds.length; i++) {
 
     // total 
     span = document.createElement("span");
+    percentage = score / (courseCount[i] * assignmentsCount);
     span.innerText = `Total: ${score} / ${courseCount[i] * assignmentsCount} => ` + parseInt(percentage * 1000) / 10 + "%";
     console.log(table, table.querySelectorAll("tr:nth-child(2) td"));
 

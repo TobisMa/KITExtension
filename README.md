@@ -5,6 +5,9 @@ Theoretically, this extension works in chromium based browser versions as well.
 # changes (from the original sites)
 ## mtv.math.kit.edu
 - open the point tables on website load (no need to do it manually now)
+- color the points in green/orange/red depending if the required percenatage has been reached
+- show the points of part1/part2
+- show the points of the single parts and the total amount also marked by color
 
 ## ilias.studium.kit.edu
 - having an e-mail menu item on the user profile
