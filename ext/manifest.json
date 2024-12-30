@@ -1,10 +1,11 @@
 {
     "manifest_version": 2,
     "name": "KIT prettify",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "browser_specific_settings": {
       "gecko": {
-        "id": "kit-nicer@tobisma.de"
+        "id": "kit-nicer@tobisma.de",
+        "update_url": "https://github.com/TobisMa/KITExtension/releases/latest"
       }
     },
     "content_scripts": [
